@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <title>🌈*•.¸♡효림이의 입시월드♡¸.•*🌈</title>
+<style type="text/css">
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF_IceLemon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    background: rgb(254,214,227);
+    background: linear-gradient(143deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
+
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* div{
+    border : solid 1px;
+} */
+
+.wrap{
+    width:80%;
+    height: 80%;
+    border-radius: 50px;
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border:#ddd;
+    /* ----------------------- */
+    background: #fff;
+    margin: 1rem;
+    position: relative;
+    /* ----------------------- */
+}
+
+.nav{
+    width:10%;
+    height:90%;
+    border-radius: 30px;
+    background: rgba(168,237,234,1);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.navwrap{
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav>iframe{
+height:20%;
+}
+
+.nav1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'KyoboHand';
+    border-radius: 10px;
+    padding:10px 0px 10px 0px;
+
+}
+
+.nav1:hover{
+    color:#fff ;
+}
+
+.nav2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'KyoboHand';
+}
+
+.nav2:hover{
+    color:#fff ;
+}
+
+.section{
+    width:45%;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+ .section2{
+    width:45%;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+.tit{
+    padding:5px;
+    width:80%;
+    height:8%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'KyoboHand';
+}
+
+.tit1{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border:#ddd;
+    /* ----------------------- */
+    background: #fff;
+    margin: 1rem;
+    position: relative;
+    /* ----------------------- */
+    padding:5px;
+    border :solid 1px;
+    width:80%;
+    height:8%;
+    margin:10px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.school{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.school>img{
+    width:50px;
+}
+
+.schoolname{
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'SDSamliphopangche_Outline'; */
+    font-family: 'KyoboHand';
+}
+
+.ddaydes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dday{
+    width:20%;
+    height: 100%;
+    
+}
+
+.dday>p{
+    font-size:2vw;
+    height: 100%;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color:rgb(252, 98, 84);
+}
+
+
+.aside{
+    width:35%;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-left: dashed 4px #ddd;
+
+    
+}
+
+.title{
+    font-family: 'SF_IceLemon';
+    width:100%;
+    font-size:34px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#date{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#right{
+    width:80%;
+    border-radius: 20px;
+    background-color: rgba(254,214,227,1);
+}
+
+#usingFunction{
+    font-size:40px;
+    font-family: 'LAB';
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.clock{
+    width:80%;
+    float:left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-radius: 20px;
+    background-color: rgb(254, 253, 214);
+}
+
+.asidedes{
+    width:80%;
+    height:50%;
+    border-radius: 20px;
+    border : dashed 2px #474646;
+    display:flex;
+    font-family: 'KyoboHand';
+    padding:10px;
+    flex-direction: column;
+}
+
+.memotit{
+    width:90%;
+    padding-left:10px;
+    padding-top:10px;
+    font-size:20px;
+}
+
+.memowrap{
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: space-evenly;
+}
+
+.memodes{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.memonum{
+    cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <div class="navwrap">
+            <div class="nav1" onclick="dis()">🍀수시🍀</div>
+            <div class="nav2" onclick="dis2()" >🔥정시🔥</div>
+            </div>
+            <iframe width="100%" height="30%" src="https://www.youtube.com/embed/wi1UJn7ofTk?autoplay=1&mute=1?controls=0&amp;start=160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="section" style="display:flex;">
+            <div class="tit">╭─────────╮<br>&nbsp;&nbsp;&nbsp; ✔️수시 접수 목록<br>╰─────────╯</div>
+                <div class="tit1">
+                    <div class="school"><img src="an.png"></div>
+                    <div class="schoolname">안양대학교</div>
+                    <div class="dday"><p id="dday1"></p></div>
+                </div>
+                <div class="tit1" onclick="window.open('https://pims.jinhakapply.com/Pass/PassList.aspx?Code=3EAFC775C5','성결대 합격자 조회','width=430,height=500,location=no,status=no,scrollbars=yes');">
+                    <div class="school"><img src="sung.png" ></div>
+                    <div class="schoolname">성결대학교</div>
+                    <div class="dday"><p id="dday12"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="hyy.png" ></div>
+                    <div class="schoolname">성공회대학교</div>
+                    <div class="dday"><p id="dday13"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school" onclick="window.open('https://pims.jinhakapply.com/Pass/PassList.aspx?Code=3EAFC775C5','한세대 합격자 조회','width=430,height=500,location=no,status=no,scrollbars=yes');"><img src="sei.png"></div>
+                    <div class="schoolname">한세대학교</div>
+                    <div class="dday"><p id="dday3"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="dong.jpg"></div>
+                    <div class="schoolname">동양미래대학교</div>
+                    <div class="dday"><p id="dday2"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="bu.PNG"></div>
+                    <div class="schoolname">부천대학교</div>
+                    <div class="dday"><p id="dday14"></p></div>
+                </div>
+                <div class="tit1" onclick="window.open('https://pims.jinhakapply.com/Pass/PassLogin.aspx?Code=E282E3A742BA48D986312873D67CC036','한양여대 합격자 조회','width=430,height=500,location=no,status=no,scrollbars=yes');">
+                    <div class="school"><img src="hang.png"></div>
+                    <div class="schoolname">한양여자대학교</div>
+                    <div class="dday"><p id="dday21"></p></div>
+                </div>
+        </div>
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="section2" style="display:none;">
+            <div class="tit">╭─────────╮<br>&nbsp;&nbsp;&nbsp; ✔️정시 접수 목록<br>╰─────────╯</div>
+                <div class="tit1">
+                    <div class="school"><img src="an.png"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday1"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="sung.png"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday12"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="hyy.png" ></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday13"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="sei.png"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday3"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="dong.jpg"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday2"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="bu.PNG"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday14"></p></div>
+                </div>
+                <div class="tit1">
+                    <div class="school"><img src="hang.png"></div>
+                    <div class="schoolname"></div>
+                    <div class="dday"><p id="dday21"></p></div>
+                </div>
+        </div>
+
+        <!-- -=------------------------------------------------------------ -->
+        <div class="aside">
+                <div class="title">🌈*•.¸♡효림이의 입시월드♡¸.•*🌈</div>
+                <div id="right"><p id="usingFunction">2021. 11. 2. 오전 1:55:27</p></div>
+                <div class="clock">⏳<iframe src="//jinh.kr/SAT_kr/page/SAT22.html" style="width:365px; height:88px; border:0;"></iframe></div>
+                <div class="asidedes">
+                    <div class="memotit">Memo</div>
+                    <div class="memowrap">
+                        <div class="memodes"><div class="memoname">안양대학교</div><div class="memonum" data-clipboard-text="121238005" title="클릭하면 복사!!">121238005</div></div>
+                        <div class="memodes"><div class="memoname">성결대학교</div><div class="memonum" data-clipboard-text="13490023" title="클릭하면 복사!!">13490023</div></div>
+                        <div class="memodes"><div class="memoname">성공회대학교</div><div class="memonum" data-clipboard-text="13450003" title="클릭하면 복사!!">13450003</div></div>
+                        <div class="memodes"><div class="memoname">한세대학교</div><div class="memonum" data-clipboard-text="220100005" title="클릭하면 복사!!">220100005</div></div>
+                        <div class="memodes"><div class="memoname">동양미래대학교</div><div class="memonum" data-clipboard-text="110397" title="클릭하면 복사!!">110397</div></div>
+                        <div class="memodes"><div class="memoname">부천대학교</div><div class="memonum" data-clipboard-text="30160029" title="클릭하면 복사!!">30160029</div></div>
+                        <div class="memodes"><div class="memoname">한양여자대학교</div><div class="memonum" data-clipboard-text="21714230007">21714230007</div></div>
+                    </div>
+                </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        function locale (){ 	 return new Date().toLocaleString(); 	 } 
+        document.getElementById( 'usingFunction' ).innerHTML = locale(); 
+        // 추가로, 실시간 타이머 표시 방법 ㅡ 1000 밀리초(=1초)에 한번씩 함수 실행하기 
+        setInterval ( function() { document.getElementById("usingFunction").innerHTML = locale(); } , 1000 );
+        
+        
+        
+        let counter = document.querySelector('#dday1');
+                let today = new Date(), //현재 날짜 가져오기
+                    dday = new Date("Dec 20,2021, 00:00:00").getTime(),//디데이
+                    gap = dday - today,
+                    result = Math.floor(gap / (1000 * 60 * 60 * 24));
+                counter.innerHTML = `D-${result}`;
+
+        let counter12 = document.querySelector('#dday12');
+                let today12 = new Date(), //현재 날짜 가져오기
+                    dday12 = new Date("Dec 20,2021, 00:00:00").getTime(),//디데이
+                    gap12 = dday12 - today12,
+                    result12 = Math.floor(gap12 / (1000 * 60 * 60 * 24));
+                counter12.innerHTML = `D-${result12}`;
+
+        let counter13 = document.querySelector('#dday13');
+                let today13 = new Date(), //현재 날짜 가져오기
+                    dday13 = new Date("Dec 20,2021, 00:00:00").getTime(),//디데이
+                    gap13 = dday13 - today13,
+                    result13 = Math.floor(gap13 / (1000 * 60 * 60 * 24));
+                counter13.innerHTML = `D-${result13}`;
+
+        let counter14 = document.querySelector('#dday14');
+                let today14 = new Date(), //현재 날짜 가져오기
+                    dday14 = new Date("Dec 20,2021, 00:00:00").getTime(),//디데이
+                    gap14 = dday14 - today14,
+                    result14 = Math.floor(gap14 / (1000 * 60 * 60 * 24));
+                counter14.innerHTML = `D-${result14}`;
+        
+        let counter1 = document.querySelector('#dday2');
+                    let today1 = new Date(), //현재 날짜 가져오기
+                    dday1 = new Date("Dec 21,2021, 00:00:00").getTime(),//디데이
+                    gap1 = dday1 - today1,
+                    result1 = Math.floor(gap1 / (1000 * 60 * 60 * 24));
+                counter1.innerHTML = `D-${result1}`;
+
+        let counter21 = document.querySelector('#dday21');
+                    let today21 = new Date(), //현재 날짜 가져오기
+                    dday21 = new Date("Dec 21,2021, 00:00:00").getTime(),//디데이
+                    gap21 = dday21 - today21,
+                    result21 = Math.floor(gap21 / (1000 * 60 * 60 * 24));
+                counter21.innerHTML = `D-${result21}`;
+        
+        let counter2 = document.querySelector('#dday3');
+                let today2 = new Date(), //현재 날짜 가져오기
+                    dday2 = new Date("Dec 27,2021, 00:00:00").getTime(),//디데이
+                    gap2 = dday2 - today2,
+                    result2 = Math.floor(gap2 / (1000 * 60 * 60 * 24));
+                counter2.innerHTML = `D-${result2}`;
+                
+        
+                var clipboard = new ClipboardJS('.memonum');
+
+                clipboard.on('success', function(e) {
+                    console.info('Action:', e.action);
+                    console.info('Text:', e.text);
+                    console.info('Trigger:', e.trigger);
+                    
+                    e.clearSelection();
+                }	
+                            );
+
+                clipboard.on('error', function(e) {
+                    console.error('Action:', e.action);
+                    console.error('Trigger:', e.trigger);
+                }
+                            );
+        // ---------------------------------section display
+            function dis2(){
+                $('.section2').show();
+                $('.section').hide();
+            
+            }
+
+            function dis(){
+                $('.section2').hide();
+                $('.section').show();
+            }
+                
+                
+                
+        
+        
+        </script>
+</body>
+</html>
